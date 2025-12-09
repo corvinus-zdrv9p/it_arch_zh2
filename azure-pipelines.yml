@@ -1,18 +1,18 @@
 trigger:
-  - main
+-main
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
   # 1. Python telepítése
-  - task: UsePythonVersion@0
+  -task: UsePythonVersion@0
     inputs:
       versionSpec: '3.x'
       addToPath: true
 
   # 2. Függőségek telepítése
-  - script: |
+  -script: |
       python -m pip install --upgrade pip
       pip install pytest
     displayName: 'Install dependencies'
